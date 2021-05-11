@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="shortcut icon" href="/static/assets/img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>个人博客 - 注册</title>
+    <link rel="stylesheet" type="text/css" href="/static/plugins/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="/static/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/assets/css/management/login-registration.css">
+</head>
+<body>
+<div class="layui-row user-login">
+    <div class="layui-col-xs12 layui-col-sm12 layui-col-md12 layui-col-lg12">
+        <form class="registration-form layui-form">
+            <div class="login-header">
+                <h2 style="font-style: italic;">个人博客系统</h2>
+                <p>楠斯素材</p>
+            </div>
+            <div class="login-body">
+                <div class="layui-form-item">
+                    <label><i class="layui-icon">&#xe612;</i> </label>
+                    <input type="text" name="bmyName" lay-verify="username"
+                           placeholder="用户名" class="layui-input">
+                </div>
+                <div class="layui-form-item">
+                    <label><i class="layui-icon">&#xe631;</i> </label>
+                    <input type="password" name="bmyPass" lay-verify="pass"
+                           placeholder="密码" class="layui-input">
+                </div>
+                <div class="layui-form-item">
+                    <label><i class="layui-icon">&#xe631;</i> </label>
+                    <input type="password" name="bmyPass2" lay-verify="pass2"
+                           placeholder="重复密码" class="layui-input">
+                </div>
+                <div class="layui-form-item">
+                    <label><i class="layui-icon">&#xe612;</i> </label>
+                    <input type="text" name="nickname" lay-verify="nickname"
+                           placeholder="用户昵称" class="layui-input">
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-row layui-col-space15">
+                        <div class="layui-col-xs7">
+                            <label for="NB-user-vercode" style="margin-top: 8px;margin-left: 7px;"><i
+                                    class="layadmin-user-login-icon layui-icon layui-icon-vercode"></i> </label>
+                            <input type="text" name="vercode" id="LAY-user-login-vercode" lay-verify="required"
+                                   placeholder="图形验证码" class="layui-input">
+                        </div>
+                        <div class="layui-col-xs5">
+                            <div>
+                                <img src="/image/code" class="layadmin-user-login-codeimg" id="NB-user-vercode"
+                                     onclick="captchaRefresh(this)">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <button class="layui-btn layui-btn-fluid" lay-submit lay-filter="bmyReg">注册
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="layui-trans layadmin-user-login-footer footer-registration">
+
+    <p><i class="fa fa-graduation-cap"></i>楠斯素材</p>
+</div>
+
+<script src="/static/plugins/layui/layui.js"></script>
+<script src="/static/plugins/md5/md5.min.js"></script>
+<script src="/static/plugins/jquery/jquery-1.11.3.min.js"></script>
+<script src="/static/assets/js/BMY.js"></script>
+<script src="/static/assets/js/registration.js"></script>
+</body>
+</html>

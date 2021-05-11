@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta th:replace="frontend/fragment/style"/>
+    <title th:text="${settings.website_title}"></title>
+</head>
+<body class="layui-anim layui-anim-fadein simple">
+<div id="index-app">
+    <bmy-header-mini :params="params" :home="current" :bodyId="bodyId"></bmy-header-mini>
+    <hr class="header-hr">
+    <bmy-block :quote="quote"></bmy-block>
+    <bmy-articles>
+        <bmy-list slot="list"></bmy-list>
+        <bmy-info :utext="params.info_label" :qq="params.qq_login" slot="infoLabel" :su="su"
+                  :order="params.info_panel_order"></bmy-info>
+        <bmy-search :sw="sw" slot="search"></bmy-search>
+        <bmy-cate :cates="cates" slot="cate"></bmy-cate>
+        <bmy-random :articles="articles" slot="random"></bmy-random>
+        <bmy-tab :tabs="tabs" slot="tab"></bmy-tab>
+    </bmy-articles>
+    <bmy-footer :words="params.footer_words"></bmy-footer>
+    <bottom-nav :params="params" :layui-element="elem"></bottom-nav>
+</div>
+<div th:replace="frontend/fragment/script"></div>
+<script th:inline="javascript">
+    //让手机端也有hover的类似效果
+    document.body.addEventListener('touchstart', function () {
+    });
+
+    layui.config({base: '/static/assets/js/frontend/'}).extend({
+        articlePagination: 'article_pagination'
+    }).use(['laytpl', 'element', 'laypage', 'articlePagination'], function () {
+        var laypage = layui.laypage;
+        var element = layui.element;
+        var laytpl = layui.laytpl;
+        var articlePagination = layui.articlePagination;
+
+        BMY.indexVM = new Vue({
+            el: "#index-app",
+            data: {
+                params: [[${settings}]]
+                , cates: [[${cateList}]]
+                , articles: [[${randomArticles}]]
+                , tabs: [[${tagList}]]
+                , current: true
+                , su: [[${su}]]
+                , bodyId: "main-body"
+                , quote: {
+                    showText: true
+                    , showBlog: true
+                    , showSearch: false
+                    , searchCount: 0
+                    , blogCount: [[${articleCount}]]
+                    , text: [[${settings.index_top_words}]]
+                },
+                sw: BMY.getParam("s") !== undefined ? decodeURIComponent(BMY.getParam("s")) : BMY.getParam("s"),
+                elem: element
+            }, mounted: function () {
+
+                laypage.render({
+                    elem: 'article-list'
+                    , count: [[${articleCount}]]
+                    , layout: ['prev', 'page', 'next', 'limit']
+                    , limits: [1, 5, 10, 15, 20, 30]
+                    , theme: '#F44336'
+                    , jump: function (obj, first) {
+                        articlePagination(obj.curr, obj.limit, laytpl, first);
+                    }
+                });
+
+
+                BMY.stickyIt();
+                BMY.affix = new hcSticky("#affix-side", {
+                    stickTo: '#main-body'
+                    , innerSticker: '#search-panel'
+                    , queries: {980: {disable: true}}
+                    , top: 75
+                    , onStart: function () {
+                        if (!BMY.sticky()) {
+                            BMY.affix.destroy();
+                        }
+                    }
+                })
+            }
+        });
+    });
+
+
+</script>
+</body>
+</html>

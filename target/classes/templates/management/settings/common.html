@@ -1,0 +1,409 @@
+<style>
+    .switch .layui-form-item {
+        margin-bottom: 0;
+    }
+</style>
+<div class="layui-card layadmin-tabs-card">
+    <div class="layui-card-header">
+        <span class="layui-breadcrumb">
+            <a href="/management/index">首页</a>
+            <a><cite>偏好设置</cite></a>
+            <a><cite>网站基本设置</cite></a>
+        </span>
+    </div>
+</div>
+<div class="layui-fluid layadmin-container" id="NB-settings-tab">
+    <div class="layui-row layui-col-space10 layui-form">
+
+        <div class="layui-card">
+            <div class="layui-card-header">网站基本设置</div>
+            <div class="layui-card-body">
+
+                <fieldset class="layui-elem-field layui-field-title">
+                    <legend>文本设置</legend>
+                </fieldset>
+
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">logo文本</label>
+                        <div class="layui-input-inline" style="width: 350px;">
+                            <input type="text" name="website_logo_words" placeholder="请输入文本"
+                                   th:value="${website_logo_words}" autocomplete="off" class="layui-input"></div>
+                    </div>
+                    <div class="layui-inline">
+                        <button class="layui-btn-sm layui-btn" lay-submit lay-filter="settings">提交</button>
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">网站标题</label>
+                        <div class="layui-input-inline" style="width: 350px;">
+                            <input type="text" name="website_title" placeholder="请输入文本"
+                                   th:value="${website_title}" autocomplete="off" class="layui-input"></div>
+                    </div>
+                    <div class="layui-inline">
+                        <button class="layui-btn-sm layui-btn" lay-submit lay-filter="settings">提交</button>
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">网站小标题</label>
+                        <div class="layui-input-inline" style="width: 350px;">
+                            <input type="text" name="website_logo_small_words" placeholder="请输入文本"
+                                   th:value="${website_logo_small_words}" autocomplete="off" class="layui-input"></div>
+                    </div>
+                    <div class="layui-inline">
+                        <button class="layui-btn-sm layui-btn" lay-submit lay-filter="settings">提交</button>
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">页眉文本</label>
+                        <div class="layui-input-inline" style="width: 450px;">
+                            <input type="text" name="index_top_words"
+                                   placeholder="请输入文本"
+                                   th:value="${index_top_words}"
+                                   autocomplete="off" class="layui-input"></div>
+                    </div>
+                    <div class="layui-inline">
+                        <button class="layui-btn-sm layui-btn" lay-submit lay-filter="settings">提交</button>
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">页脚文本</label>
+                        <div class="layui-input-inline" style="width: 450px;">
+                            <input type="text" name="footer_words"
+                                   placeholder="请输入文本"
+                                   th:value="${footer_words}"
+                                   autocomplete="off" class="layui-input"></div>
+                    </div>
+                    <div class="layui-inline">
+                        <button class="layui-btn-sm layui-btn" lay-submit lay-filter="settings">提交</button>
+                    </div>
+                </div>
+
+                <fieldset class="layui-elem-field layui-field-title">
+                    <legend>信息板内容（在默认风格模式下有效）</legend>
+                </fieldset>
+
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">信息板位置</label>
+                        <div class="layui-input-inline">
+                            <input type="checkbox" name="info_panel_order" lay-skin="switch" lay-text="首要|次要"
+                                   lay-filter="switchFilter" th:checked="${info_panel_order eq '1'}">
+                        </div>
+                        <div class="layui-form-mid layui-word-aux">默认信息板在用户登录操作左侧</div>
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">信息板内容</label>
+                        <div class="layui-input-inline" style="width: 600px;">
+                                <textarea name="info_label" placeholder="请输入信息板html内容"
+                                          class="layui-textarea" th:utext="${info_label}"
+                                          style="height: 250px;"></textarea>
+                            <p class="layui-admin-mt10" style="color: #999;">总字符数最多不超过500</p>
+                        </div>
+                        <div class="layui-inline">
+                            <button class="layui-btn-sm layui-btn" lay-submit lay-filter="settings">提交</button>
+                        </div>
+                    </div>
+
+
+                    <fieldset class="layui-elem-field layui-field-title">
+                        <legend>评论设置</legend>
+                    </fieldset>
+
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">全站评论</label>
+                            <div class="layui-input-inline">
+                                <input type="checkbox" name="all_comment_open" lay-skin="switch" lay-text="开启|关闭"
+                                       lay-filter="switchFilter"
+                                       th:checked="${all_comment_open eq '1'}">
+                            </div>
+                            <div class="layui-form-mid layui-word-aux">开启则按照每篇文章的设定来，如关闭则全局关闭（忽略文章的设置）</div>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item" id="comment-open" v-show="openComment">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">评论区置顶</label>
+                            <div class="layui-input-inline" style="width: 650px;">
+                                <input type="text" name="comment_notice" placeholder="请输入评论区置顶公告信息"
+                                       th:value="${comment_notice}" autocomplete="off" class="layui-input"></div>
+                        </div>
+                        <div class="layui-inline">
+                            <button class="layui-btn-sm layui-btn" lay-submit lay-filter="settings">提交</button>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">留言功能</label>
+                            <div class="layui-input-inline">
+                                <input type="checkbox" name="is_open_message" lay-skin="switch" lay-text="开启|关闭"
+                                       lay-filter="switchFilter"
+                                       th:checked="${is_open_message eq '1'}">
+                            </div>
+                            <div class="layui-form-mid layui-word-aux">开启则网友可以通过登录后发表留言，关闭则不显示文本框只允许查看以前的留言</div>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item" id="message-open" v-show="openMessage">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">留言区置顶</label>
+                            <div class="layui-input-inline" style="width: 750px;">
+                                <input type="text" name="message_panel_words" placeholder="请输入公告信息"
+                                       th:value="${message_panel_words}" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <button class="layui-btn-sm layui-btn" lay-submit lay-filter="settings">提交</button>
+                        </div>
+                    </div>
+
+
+                    <fieldset class="layui-elem-field layui-field-title">
+                        <legend>第三方设置</legend>
+                    </fieldset>
+
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">开启QQ登录</label>
+                            <div class="layui-input-inline">
+                                <input type="checkbox" name="qq_login" lay-skin="switch" lay-text="开启|关闭"
+                                       lay-filter="switchFilter" th:checked="${qq_login eq '1'}">
+                            </div>
+                            <div class="layui-form-mid layui-word-aux">开启则网站用户可以使用QQ快速登录</div>
+                        </div>
+                    </div>
+
+                    <div id="qq-login-id" class="layui-form-item" v-show="qqLoginOpen">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">APP ID</label>
+                            <div class="layui-input-inline" style="width: 250px;">
+                                <input type="text" name="app_id" placeholder="请输入AppId"
+                                       th:value="${app_id}" autocomplete="off" class="layui-input"></div>
+                        </div>
+                        <div class="layui-inline">
+                            <button class="layui-btn-sm layui-btn" lay-submit lay-filter="settings">提交</button>
+                        </div>
+                    </div>
+
+                    <div id="qq-login-key" class="layui-form-item" v-show="qqLoginOpen">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">APP Key</label>
+                            <div class="layui-input-inline" style="width: 450px;">
+                                <input type="text" name="app_key" placeholder="请输入AppKey"
+                                       th:value="${app_key}" autocomplete="off" class="layui-input"></div>
+                        </div>
+                        <div class="layui-inline">
+                            <button class="layui-btn-sm layui-btn" lay-submit lay-filter="settings">提交</button>
+                        </div>
+                    </div>
+
+                    <div id="project-top-words" class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">项目置顶字</label>
+                            <div class="layui-input-inline" style="width: 450px;">
+                                <input type="text" name="project_top_notice" placeholder="请输入提示语"
+                                       th:value="${project_top_notice}" autocomplete="off" class="layui-input"></div>
+                        </div>
+                        <div class="layui-inline">
+                            <button class="layui-btn-sm layui-btn" lay-submit lay-filter="settings">提交</button>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">开启七牛云服务</label>
+                            <div class="layui-input-inline">
+                                <input type="checkbox" name="is_open_oss_upload" lay-skin="switch" lay-text="开启|关闭"
+                                       lay-filter="switchFilter" th:checked="${is_open_oss_upload eq '1'}">
+                            </div>
+                            <div class="layui-form-mid layui-word-aux">开启则网站用户则上传文件至七牛云</div>
+                        </div>
+                    </div>
+
+                    <div id="qiniu-access-key" class="layui-form-item" v-show="qiniuOpen">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">AccessKey</label>
+                            <div class="layui-input-inline" style="width: 450px;">
+                                <input type="text" name="qiniu_accessKey" placeholder="请输入AccessKey"
+                                       th:value="${qiniu_accessKey}" autocomplete="off" class="layui-input"></div>
+                        </div>
+                        <div class="layui-inline">
+                            <button class="layui-btn-sm layui-btn" lay-submit lay-filter="settings">提交</button>
+                        </div>
+                    </div>
+
+                    <div id="qiniu-secret-key" class="layui-form-item" v-show="qiniuOpen">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">SecretKey</label>
+                            <div class="layui-input-inline" style="width: 450px;">
+                                <input type="text" name="qiniu_secretKey" placeholder="请输入SecretKey"
+                                       th:value="${qiniu_secretKey}" autocomplete="off" class="layui-input"></div>
+                        </div>
+                        <div class="layui-inline">
+                            <button class="layui-btn-sm layui-btn" lay-submit lay-filter="settings">提交</button>
+                        </div>
+                    </div>
+
+                    <div id="qiniu-bucket" class="layui-form-item" v-show="qiniuOpen">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">bucket</label>
+                            <div class="layui-input-inline" style="width: 450px;">
+                                <input type="text" name="qiniu_bucket" placeholder="请输入bucket"
+                                       th:value="${qiniu_bucket}" autocomplete="off" class="layui-input"></div>
+                        </div>
+                        <div class="layui-inline">
+                            <button class="layui-btn-sm layui-btn" lay-submit lay-filter="settings">提交</button>
+                        </div>
+                    </div>
+
+                    <div id="qiniu-domain" class="layui-form-item" v-show="qiniuOpen">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">七牛域名</label>
+                            <div class="layui-input-inline" style="width: 450px;">
+                                <input type="text" name="qiniu_domain" placeholder="请输入访问域名，以http或https开头"
+                                       th:value="${qiniu_domain}" autocomplete="off" class="layui-input"></div>
+                        </div>
+                        <div class="layui-inline">
+                            <button class="layui-btn-sm layui-btn" lay-submit lay-filter="settings">提交</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<script th:inline="javascript">
+    var settingsApp = new Vue({
+        el: "#NB-settings-tab"
+        , data: {
+            openComment: [[${all_comment_open eq '1'}]]
+            , openMessage: [[${is_open_message eq '1'}]]
+            , linkShow: [[${menu_link_show eq '1'}]]
+            , noteShow: [[${menu_note_show eq '1'}]]
+            , projectShow: [[${menu_project_show eq '1'}]]
+            , aboutShow: [[${menu_mine_show eq '1'}]]
+            , searchShow: [[${menu_search_show eq '1'}]]
+            , qqLoginOpen: [[${qq_login eq '1'}]]
+            , qiniuOpen: [[${is_open_oss_upload eq '1'}]]
+        }
+        , mounted: function () {
+            layui.use(['form', 'element'], function () {
+                var element = layui.element
+                    , form = layui.form;
+                element.render();
+                form.render();
+
+                form.on('switch(switchFilter)', function (data) {
+                    var status = data.elem.checked ? 1 : 0;
+                    var name = $(data.elem).attr("name");
+                    BMY.ajaxManagement("/settings/update", {
+                        type: "switch"
+                        , name: name
+                        , value: status
+                    }, function (resp) {
+                        if (resp.code === BMY.status.ok) {
+                            layer.tips('修改成功！', data.othis);
+                            if (name === 'all_comment_open') {
+                                settingsApp.openComment = data.elem.checked;
+                            }
+                            else if (name === 'is_open_message') {
+                                settingsApp.openMessage = data.elem.checked;
+                            }
+                            else if (name === 'menu_link_show') {
+                                settingsApp.linkShow = data.elem.checked;
+                            }
+                            else if (name === 'menu_note_show') {
+                                settingsApp.noteShow = data.elem.checked;
+                            }
+                            else if (name === 'menu_mine_show') {
+                                settingsApp.aboutShow = data.elem.checked;
+                            }
+                            else if (name === 'menu_project_show') {
+                                settingsApp.projectShow = data.elem.checked;
+                            }
+                            else if (name === 'menu_search_show') {
+                                settingsApp.searchShow = data.elem.checked;
+                            }
+                            else if (name === 'qq_login') {
+                                settingsApp.qqLoginOpen = data.elem.checked;
+                            }
+                            else if (name === 'is_open_oss_upload') {
+                                settingsApp.qiniuOpen = data.elem.checked;
+                            }
+                        }
+                    })
+                });
+
+                form.on('submit(settings)', function (data) {
+                    var $this = $(data.elem);
+                    var $data = $this.parent(".layui-inline").prev(".layui-inline").find("input.layui-input:eq(0)");
+                    var name = $data.attr("name");
+                    name = name === undefined ? $this.parent(".layui-inline").prev(".layui-input-inline").find("textarea").attr("name") : name;
+                    var value = $data.val();
+                    value = value === undefined ? $this.parent(".layui-inline").prev(".layui-input-inline").find("textarea").val() : value;
+                    BMY.ajaxManagement("/settings/update", {
+                        type: 'text',
+                        name: name,
+                        value: value
+                    }, function (json) {
+                        BMY.okMsgHandle(json);
+                    });
+                    return false;
+                });
+
+                form.on('submit(link)', function () {
+                    var value = $("input[name=menu_link_icon]").val();
+                    value = value + "," + $("input[name=menu_link]").val();
+                    value = value + "," + $("input[name=menu_link_href]").val();
+                    BMY.ajaxManagement("/settings/update", {
+                        type: 'text',
+                        name: 'menu_link_icon',
+                        value: value
+                    }, function (json) {
+                        BMY.okMsgHandle(json);
+                    });
+                    return false;
+                });
+
+                form.on('radio(page_modern)', function (data) {
+                    BMY.ajaxManagement("/settings/update", {
+                        type: 'text'
+                        , name: 'page_modern'
+                        , value: data.value
+                    }, function (json) {
+                        BMY.okMsgHandle(json)
+                    })
+                });
+
+                form.on('radio(index_style)', function (data) {
+                    BMY.ajaxManagement("/settings/update", {
+                        type: 'text'
+                        , name: 'index_style'
+                        , value: data.value
+                    }, function (json) {
+                        BMY.okMsgHandle(json)
+                    })
+                });
+
+            });
+        }
+    })
+</script>
+

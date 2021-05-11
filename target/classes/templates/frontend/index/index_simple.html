@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta th:replace="frontend/fragment/style"/>
+    <title th:text="${settings.website_title}"></title>
+</head>
+<body class="layui-anim layui-anim-fadein simple">
+<div id="index-app">
+    <bmy-header-mini :params="params" :home="current" :bodyId="bodyId"></bmy-header-mini>
+    <hr class="header-hr">
+    <bmy-block :quote="quote"></bmy-block>
+    <div id="main-body" class="layui-container simple">
+        <div class="layui-row layui-col-space10" id="article-simple-list">
+        </div>
+    </div>
+    <bmy-footer :words="params.footer_words"></bmy-footer>
+    <bottom-nav :params="params" :layui-element="elem"></bottom-nav>
+</div>
+<div th:replace="frontend/fragment/script"></div>
+<script th:inline="javascript">
+    //让手机端也有hover的类似效果
+    document.body.addEventListener('touchstart', function () {
+    });
+
+    layui.config({base: '/static/assets/js/frontend/'}).extend({
+        article: 'article_simple'
+    }).use(['laytpl', 'element', 'flow', 'article_simple'], function () {
+        var flow = layui.flow;
+        var element = layui.element;
+        var laytpl = layui.laytpl;
+        var articleSimple = layui.article_simple;
+
+        BMY.indexVM = new Vue({
+            el: "#index-app",
+            data: {
+                params: [[${settings}]]
+                , quote: {
+                    showText: true
+                    , showBlog: true
+                    , showSearch: false
+                    , searchCount: 0
+                    , blogCount: [[${articleCount}]]
+                    , text: [[${settings.index_top_words}]]
+                },
+                current: true,
+                su: [[${su}]],
+                bodyId: "main-body",
+                sw: BMY.getParam("s") !== undefined ? decodeURIComponent(BMY.getParam("s")) : BMY.getParam("s"),
+                elem: element
+            }, mounted:
+
+                function () {
+
+                    flow.load({
+                        elem: '#article-simple-list' //流加载容器
+                        , done: function (page, next) { //执行下一页的回调
+                            return articleSimple(page, next, laytpl);
+                        }
+                    });
+                }
+        })
+        ;
+
+    });
+
+
+</script>
+</body>
+</html>

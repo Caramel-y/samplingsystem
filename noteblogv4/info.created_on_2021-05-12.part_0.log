@@ -1,0 +1,479 @@
+00:09:27.125 [restartedMain] INFO  c.p.s.SamplingsystemApplication - Starting SamplingsystemApplication on LAPTOP-71E145JU with PID 12736 (D:\WorkSpace\IdeaSpace\samplingsystem\target\classes started by chenhan in D:\WorkSpace\IdeaSpace\samplingsystem) 
+00:09:27.125 [restartedMain] INFO  c.p.s.SamplingsystemApplication - The following profiles are active: sampling 
+00:09:27.172 [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@279e6928: startup date [Wed May 12 00:09:27 CST 2021]; root of context hierarchy 
+00:09:28.007 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.project.samplingsystem.dao]' package. Please check your configuration. 
+00:09:28.169 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.project.samplingsystem]' package. Please check your configuration. 
+00:09:29.072 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7d166ffe] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+00:09:29.511 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default' 
+00:09:29.589 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...] 
+00:09:29.639 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.2.17.Final} 
+00:09:29.639 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found 
+00:09:29.674 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final} 
+00:09:30.029 [restartedMain] INFO  c.a.druid.pool.DruidDataSource - {dataSource-1} inited 
+00:09:30.161 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: com.project.samplingsystem.config.configuration.LocalMySQL57InnoDBDialect 
+00:09:30.344 [restartedMain] WARN  org.hibernate.id.UUIDHexGenerator - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead 
+00:09:30.898 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+00:09:31.262 [restartedMain] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory 
+00:09:31.780 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8089 (http) 
+00:09:31.801 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat] 
+00:09:31.801 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31 
+00:09:31.801 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Program Files\Java\jdk1.8.0_162\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\Program Files\Java\jdk1.8.0_162\bin;D:\Program Files\Java\jdk1.8.0_162\jre\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\Program Files\Git\cmd;D:\Program Files\Maven\apache-maven-3.5.2 - idea\bin;C:\Users\chenhan\AppData\Local\Microsoft\WindowsApps;;D:\Program Files\Microsoft VS Code\bin;.] 
+00:09:31.964 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+00:09:31.964 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4792 ms 
+00:09:32.150 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/] 
+00:09:32.150 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet statViewServlet mapped to [/druid/*] 
+00:09:32.150 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*] 
+00:09:32.150 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+00:09:32.150 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+00:09:32.150 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*] 
+00:09:32.150 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'webStatFilter' to urls: [/*] 
+00:09:32.201 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: com.project.samplingsystem.config.configuration.LocalMySQL57InnoDBDialect 
+00:09:33.736 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+00:09:34.184 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@279e6928: startup date [Wed May 12 00:09:27 CST 2021]; root of context hierarchy 
+00:09:34.184 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Detected @ModelAttribute methods in globalController 
+00:09:34.206 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+00:09:34.238 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/registration],methods=[POST]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.EntranceController.register(java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest) 
+00:09:34.238 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/qqCallback]}" onto public java.lang.String com.project.samplingsystem.web.EntranceController.qqCallback(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String) 
+00:09:34.238 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/registration],methods=[GET]}" onto public java.lang.String com.project.samplingsystem.web.EntranceController.registration() 
+00:09:34.238 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/logout],methods=[GET]}" onto public java.lang.String com.project.samplingsystem.web.EntranceController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String) 
+00:09:34.238 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/token/logout],methods=[GET]}" onto public java.lang.String com.project.samplingsystem.web.EntranceController.logout2(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String) 
+00:09:34.238 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.project.samplingsystem.web.EntranceController.login(javax.servlet.http.HttpServletRequest,java.lang.String) 
+00:09:34.238 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login],methods=[POST]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.EntranceController.login(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,com.project.samplingsystem.model.pojo.business.SimpleLoginData) 
+00:09:34.238 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/qq]}" onto public java.lang.String com.project.samplingsystem.web.EntranceController.qqLogin(javax.servlet.http.HttpServletRequest) 
+00:09:34.238 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[application/json || application/x-www-form-urlencoded || multipart/form-data]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.ErrorController.error(javax.servlet.http.HttpServletRequest) 
+00:09:34.238 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView com.project.samplingsystem.web.ErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+00:09:34.238 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/file]}" onto public java.lang.String com.project.samplingsystem.web.frontend.CloudFileController.file(org.springframework.ui.Model,java.lang.Long) 
+00:09:34.238 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/file/list]}" onto public com.project.samplingsystem.model.pojo.framework.LayuiTable<com.project.samplingsystem.model.entity.NBCloudFile> com.project.samplingsystem.web.frontend.CloudFileController.cateList(com.project.samplingsystem.model.pojo.framework.Pagination<com.project.samplingsystem.model.entity.NBCloudFile>,java.lang.Long,java.lang.String) 
+00:09:34.238 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/article/comments || /a/comments],methods=[POST]}" onto public org.springframework.data.domain.Page<com.project.samplingsystem.model.entity.NBComment> com.project.samplingsystem.web.frontend.content.ArticleController.comments(com.project.samplingsystem.model.pojo.framework.Pagination<com.project.samplingsystem.model.entity.NBComment>,com.project.samplingsystem.model.pojo.bo.CommentQueryBO) 
+00:09:34.238 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/article/{aId} || /a/{aId}]}" onto public java.lang.String com.project.samplingsystem.web.frontend.content.ArticleController.article(java.lang.Long,org.springframework.ui.Model,com.project.samplingsystem.model.pojo.framework.Pagination<com.project.samplingsystem.model.entity.NBComment>,com.project.samplingsystem.model.pojo.bo.CommentQueryBO) 
+00:09:34.238 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/article/approve || /a/approve],methods=[POST]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.frontend.content.ArticleController.approve(java.lang.Long) 
+00:09:34.238 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/article/u/{urlSeq} || /a/u/{urlSeq}]}" onto public java.lang.String com.project.samplingsystem.web.frontend.content.ArticleController.articleByUrl(java.lang.String,org.springframework.ui.Model,com.project.samplingsystem.model.pojo.framework.Pagination<com.project.samplingsystem.model.entity.NBComment>,com.project.samplingsystem.model.pojo.bo.CommentQueryBO) 
+00:09:34.238 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/token/comment/sub],methods=[POST]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.frontend.content.CommentController.sub(com.project.samplingsystem.model.entity.NBComment,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest) 
+00:09:34.238 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/msg]}" onto public java.lang.String com.project.samplingsystem.web.frontend.content.MessageController.index(org.springframework.ui.Model,com.project.samplingsystem.model.pojo.framework.Pagination<com.project.samplingsystem.model.entity.NBMessage>,com.project.samplingsystem.model.pojo.bo.MessageQueryBO) 
+00:09:34.238 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/msg/lists],methods=[POST]}" onto public org.springframework.data.domain.Page<com.project.samplingsystem.model.entity.NBMessage> com.project.samplingsystem.web.frontend.content.MessageController.comments(com.project.samplingsystem.model.pojo.framework.Pagination<com.project.samplingsystem.model.entity.NBMessage>,com.project.samplingsystem.model.pojo.bo.MessageQueryBO) 
+00:09:34.238 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/token/msg/sub],methods=[POST]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.frontend.content.MessageController.sub(com.project.samplingsystem.model.entity.NBMessage,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest) 
+00:09:34.238 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/note],methods=[GET]}" onto public java.lang.String com.project.samplingsystem.web.frontend.content.NoteController.index(org.springframework.ui.Model) 
+00:09:34.238 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/note/next],methods=[POST]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.frontend.content.NoteController.next(com.project.samplingsystem.model.pojo.framework.Pagination<com.project.samplingsystem.model.entity.NBNote>,java.lang.String,java.lang.String) 
+00:09:34.238 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[ || /index]}" onto public java.lang.String com.project.samplingsystem.web.frontend.IndexController.index(org.springframework.ui.Model) 
+00:09:34.238 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/next || /index/next]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.frontend.IndexController.nextPageArticle(com.project.samplingsystem.model.pojo.framework.Pagination<com.project.samplingsystem.model.entity.NBArticle>,com.project.samplingsystem.model.pojo.bo.ArticleQueryBO) 
+00:09:34.238 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/profile]}" onto public java.lang.String com.project.samplingsystem.web.frontend.ProfileController.profile(org.springframework.ui.Model) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/project/next],methods=[POST]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.frontend.ProjectController.next(com.project.samplingsystem.model.pojo.framework.Pagination<com.project.samplingsystem.model.entity.NBNote>,java.lang.Long) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/project]}" onto public java.lang.String com.project.samplingsystem.web.frontend.ProjectController.project(org.springframework.ui.Model,com.project.samplingsystem.model.pojo.framework.Pagination<com.project.samplingsystem.model.entity.NBProject>,java.lang.Long) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/tag/all],methods=[GET]}" onto public java.util.List<com.project.samplingsystem.model.entity.NBTag> com.project.samplingsystem.web.frontend.TagController.tagsList() 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/init]}" onto public java.lang.String com.project.samplingsystem.web.InitController.init() 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/font/list]}" onto public java.lang.String com.project.samplingsystem.web.InitController.b(javax.servlet.http.HttpServletRequest) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/init/submit]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.InitController.initSubmit(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,java.lang.String) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/image/code]}" onto public org.springframework.web.servlet.ModelAndView com.project.samplingsystem.web.KaptchaController.kaptcha(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/index]}" onto public java.lang.String com.project.samplingsystem.web.management.AdminIndexController.index(org.springframework.ui.Model) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dashboard]}" onto public java.lang.String com.project.samplingsystem.web.management.AdminIndexController.dashboard(org.springframework.ui.Model) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/role/create]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.authority.AuthorityController.addRole(com.project.samplingsystem.model.entity.permission.NBSysRole,org.springframework.validation.BindingResult) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/update/role/resource]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.authority.AuthorityController.updateRoleResource(java.lang.Long,java.lang.Long[]) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/menu/delete]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.authority.AuthorityController.deleteMenu(java.lang.Long) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/menu/add]}" onto public java.lang.String com.project.samplingsystem.web.management.authority.AuthorityController.addMenu(org.springframework.ui.Model,java.lang.Long,java.lang.String) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/menu/edit]}" onto public java.lang.String com.project.samplingsystem.web.management.authority.AuthorityController.addMenu(org.springframework.ui.Model,java.lang.Long,java.lang.Long) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/resource/tree]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.authority.AuthorityController.resourcesTree(java.lang.Long) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/menu/list]}" onto public com.project.samplingsystem.model.pojo.framework.LayuiTable<com.project.samplingsystem.model.entity.permission.NBSysMenu> com.project.samplingsystem.web.management.authority.AuthorityController.roleMenuList(java.lang.Long) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/role/delete]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.authority.AuthorityController.deleteRole(java.lang.Long) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/menu/update]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.authority.AuthorityController.modifyMenu(com.project.samplingsystem.model.entity.permission.NBSysMenu,org.springframework.validation.BindingResult) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/menu/create]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.authority.AuthorityController.createMenu(com.project.samplingsystem.model.entity.permission.NBSysMenu,org.springframework.validation.BindingResult) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/role]}" onto public java.lang.String com.project.samplingsystem.web.management.authority.AuthorityController.roleRouter(org.springframework.ui.Model) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/menu]}" onto public java.lang.String com.project.samplingsystem.web.management.authority.AuthorityController.menuIndex(org.springframework.ui.Model,java.lang.Long) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/role/update]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.authority.AuthorityController.updateRole(com.project.samplingsystem.model.entity.permission.NBSysRole,org.springframework.validation.BindingResult) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/users/list],methods=[GET]}" onto public com.project.samplingsystem.model.pojo.framework.LayuiTable<com.project.samplingsystem.model.entity.permission.NBSysUser> com.project.samplingsystem.web.management.authority.UserController.userList(com.project.samplingsystem.model.pojo.framework.Pagination<com.project.samplingsystem.model.entity.permission.NBSysUser>,com.project.samplingsystem.model.entity.permission.NBSysUser) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/users/roles/id/update]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.authority.UserController.userRolesIdUpdate(java.lang.Long,java.lang.String) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/users/roles/str/update]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.authority.UserController.userRolesStrUpdate(java.lang.Long,java.lang.String) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/users/roles/list]}" onto public java.util.List<com.project.samplingsystem.model.entity.permission.NBSysRole> com.project.samplingsystem.web.management.authority.UserController.roleList(java.lang.Long) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/users/enable/update],methods=[POST]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.authority.UserController.enableUpdate(java.lang.Long,java.lang.Boolean) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/users/nickname/update]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.authority.UserController.nicknameUpdate(java.lang.Long,java.lang.String) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/users]}" onto public java.lang.String com.project.samplingsystem.web.management.authority.UserController.usersListRouter() 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/cloudFile/add]}" onto public java.lang.String com.project.samplingsystem.web.management.CloudFileController.add(org.springframework.ui.Model) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/cloudFile/delete/{id}]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.CloudFileController.delete(java.lang.Long) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/cloudFile],methods=[GET]}" onto public java.lang.String com.project.samplingsystem.web.management.CloudFileController.list() 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/cloudFile/create]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.CloudFileController.projectCreate(com.project.samplingsystem.model.entity.NBCloudFile,org.springframework.validation.BindingResult) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/cloudFile/list],methods=[GET]}" onto public com.project.samplingsystem.model.pojo.framework.LayuiTable<com.project.samplingsystem.model.entity.NBCloudFile> com.project.samplingsystem.web.management.CloudFileController.cloudFileList(com.project.samplingsystem.model.pojo.framework.Pagination<com.project.samplingsystem.model.entity.NBCloudFile>) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/cloudFile/update]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.CloudFileController.projectUpdate(com.project.samplingsystem.model.entity.NBCloudFile,org.springframework.validation.BindingResult) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/cloudFile/edit]}" onto public java.lang.String com.project.samplingsystem.web.management.CloudFileController.edit(org.springframework.ui.Model,java.lang.Long) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/article/delete/{id}]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.content.ArticleController.delete(java.lang.Long) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/article/update/top/{id}]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.content.ArticleController.top(java.lang.Long,java.lang.Boolean) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/article/update/appreciable/{id}]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.content.ArticleController.appreciable(java.lang.Long,java.lang.Boolean) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/article/edit/tags]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.content.ArticleController.editPageArticleTags(java.lang.Long) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/article/post]}" onto public java.lang.String com.project.samplingsystem.web.management.content.ArticleController.article(org.springframework.ui.Model) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/article/update/commented/{id}]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.content.ArticleController.commented(java.lang.Long,java.lang.Boolean) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/article],methods=[GET]}" onto public java.lang.String com.project.samplingsystem.web.management.content.ArticleController.articleList() 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/article/list],methods=[GET]}" onto public com.project.samplingsystem.model.pojo.framework.LayuiTable<com.project.samplingsystem.model.entity.NBArticle> com.project.samplingsystem.web.management.content.ArticleController.articleList(com.project.samplingsystem.model.pojo.framework.Pagination<com.project.samplingsystem.model.entity.NBArticle>,java.lang.String,java.lang.String) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/article/create]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.content.ArticleController.articleCreate(com.project.samplingsystem.model.entity.NBArticle,org.springframework.validation.BindingResult,java.lang.String,java.lang.String) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/article/edit]}" onto public java.lang.String com.project.samplingsystem.web.management.content.ArticleController.edit(org.springframework.ui.Model,java.lang.Long) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/article/update]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.content.ArticleController.articleUpdate(com.project.samplingsystem.model.entity.NBArticle,org.springframework.validation.BindingResult,java.lang.String,java.lang.String) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/note/delete/{id}]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.content.NoteController.delete(java.lang.Long) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/note/update/top/{id}]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.content.NoteController.top(java.lang.Long,java.lang.Boolean) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/note/update/show/{id}]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.content.NoteController.show(java.lang.Long,java.lang.Boolean) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/note/update]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.content.NoteController.updateNote(com.project.samplingsystem.model.entity.NBNote,org.springframework.validation.BindingResult,java.lang.String) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/note/create]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.content.NoteController.noteCreate(com.project.samplingsystem.model.entity.NBNote,org.springframework.validation.BindingResult,java.lang.String) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/note/list],methods=[GET]}" onto public com.project.samplingsystem.model.pojo.framework.LayuiTable<com.project.samplingsystem.model.entity.NBNote> com.project.samplingsystem.web.management.content.NoteController.noteList(com.project.samplingsystem.model.pojo.framework.Pagination<com.project.samplingsystem.model.entity.NBNote>,java.lang.String,java.lang.String) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/note],methods=[GET]}" onto public java.lang.String com.project.samplingsystem.web.management.content.NoteController.noteList() 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/note/edit/tags]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.content.NoteController.editPageNoteTags(java.lang.Long) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/note/post]}" onto public java.lang.String com.project.samplingsystem.web.management.content.NoteController.notePost() 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/note/edit]}" onto public java.lang.String com.project.samplingsystem.web.management.content.NoteController.edit(org.springframework.ui.Model,java.lang.Long) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/cate/update]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.dictionary.AdminCateController.update(com.project.samplingsystem.model.entity.NBCate,org.springframework.validation.BindingResult) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/cate/delete]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.dictionary.AdminCateController.delete(java.lang.Long) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/cate]}" onto public java.lang.String com.project.samplingsystem.web.management.dictionary.AdminCateController.cate() 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/cate/list]}" onto public com.project.samplingsystem.model.pojo.framework.LayuiTable<com.project.samplingsystem.model.entity.NBCate> com.project.samplingsystem.web.management.dictionary.AdminCateController.cateList(com.project.samplingsystem.model.pojo.framework.Pagination<com.project.samplingsystem.model.entity.NBCate>) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/cate/create]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.dictionary.AdminCateController.cateCreate(com.project.samplingsystem.model.entity.NBCate) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/cloudFileCate/update]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.dictionary.AdminCloudFileCateController.update(com.project.samplingsystem.model.entity.NBCloudFileCate,org.springframework.validation.BindingResult) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/cloudFileCate/delete]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.dictionary.AdminCloudFileCateController.delete(java.lang.Long) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/cloudFileCate]}" onto public java.lang.String com.project.samplingsystem.web.management.dictionary.AdminCloudFileCateController.cate() 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/cloudFileCate/list]}" onto public com.project.samplingsystem.model.pojo.framework.LayuiTable<com.project.samplingsystem.model.entity.NBCloudFileCate> com.project.samplingsystem.web.management.dictionary.AdminCloudFileCateController.cateList(com.project.samplingsystem.model.pojo.framework.Pagination<com.project.samplingsystem.model.entity.NBCloudFileCate>) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/cloudFileCate/create]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.dictionary.AdminCloudFileCateController.cateCreate(com.project.samplingsystem.model.entity.NBCloudFileCate) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/keyword/delete]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.dictionary.AdminKeywordController.delete(java.lang.Long) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/keyword]}" onto public java.lang.String com.project.samplingsystem.web.management.dictionary.AdminKeywordController.cate() 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/keyword/update/enable]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.dictionary.AdminKeywordController.enableUpdate(com.project.samplingsystem.model.entity.NBKeyword) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/keyword/create]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.dictionary.AdminKeywordController.keywordCreate(com.project.samplingsystem.model.entity.NBKeyword) 
+00:09:34.253 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/keyword/update]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.dictionary.AdminKeywordController.wordsUpdate(com.project.samplingsystem.model.entity.NBKeyword,org.springframework.validation.BindingResult) 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/keyword/list]}" onto public com.project.samplingsystem.model.pojo.framework.LayuiTable<com.project.samplingsystem.model.entity.NBKeyword> com.project.samplingsystem.web.management.dictionary.AdminKeywordController.keywordList(com.project.samplingsystem.model.pojo.framework.Pagination<com.project.samplingsystem.model.entity.NBKeyword>) 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/projectCate/update]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.dictionary.AdminProjectCateController.update(com.project.samplingsystem.model.entity.NBProjectCate,org.springframework.validation.BindingResult) 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/projectCate/delete]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.dictionary.AdminProjectCateController.delete(java.lang.Long) 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/projectCate]}" onto public java.lang.String com.project.samplingsystem.web.management.dictionary.AdminProjectCateController.cate() 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/projectCate/list]}" onto public com.project.samplingsystem.model.pojo.framework.LayuiTable<com.project.samplingsystem.model.entity.NBProjectCate> com.project.samplingsystem.web.management.dictionary.AdminProjectCateController.cateList(com.project.samplingsystem.model.pojo.framework.Pagination<com.project.samplingsystem.model.entity.NBProjectCate>) 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/projectCate/create]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.dictionary.AdminProjectCateController.cateCreate(com.project.samplingsystem.model.entity.NBProjectCate) 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/tag/update]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.dictionary.AdminTagController.update(com.project.samplingsystem.model.entity.NBTag,org.springframework.validation.BindingResult) 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/tag/delete]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.dictionary.AdminTagController.delete(java.lang.Long) 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/tag/list]}" onto public com.project.samplingsystem.model.pojo.framework.LayuiTable<com.project.samplingsystem.model.entity.NBTag> com.project.samplingsystem.web.management.dictionary.AdminTagController.cateList(com.project.samplingsystem.model.pojo.framework.Pagination<com.project.samplingsystem.model.entity.NBTag>,java.lang.String) 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/dictionary/tag]}" onto public java.lang.String com.project.samplingsystem.web.management.dictionary.AdminTagController.tagIndex() 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/comment/update]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.message.AdminCommentController.delete(java.lang.Long,boolean) 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/comment/list]}" onto public com.project.samplingsystem.model.pojo.framework.LayuiTable<com.project.samplingsystem.model.entity.NBComment> com.project.samplingsystem.web.management.message.AdminCommentController.cateList(com.project.samplingsystem.model.pojo.framework.Pagination<com.project.samplingsystem.model.entity.NBComment>,java.lang.String) 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/comment]}" onto public java.lang.String com.project.samplingsystem.web.management.message.AdminCommentController.tagIndex() 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/message/update]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.message.AdminMessageController.delete(java.lang.Long,boolean) 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/message/list]}" onto public com.project.samplingsystem.model.pojo.framework.LayuiTable<com.project.samplingsystem.model.entity.NBMessage> com.project.samplingsystem.web.management.message.AdminMessageController.cateList(com.project.samplingsystem.model.pojo.framework.Pagination<com.project.samplingsystem.model.entity.NBMessage>,java.lang.String) 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/message]}" onto public java.lang.String com.project.samplingsystem.web.management.message.AdminMessageController.tagIndex() 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/profile]}" onto public java.lang.String com.project.samplingsystem.web.management.ProfileController.profile() 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/profile/delete]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.ProfileController.delete(java.lang.Long) 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/profile/add]}" onto public java.lang.String com.project.samplingsystem.web.management.ProfileController.notePost() 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/profile/edit]}" onto public java.lang.String com.project.samplingsystem.web.management.ProfileController.edit(org.springframework.ui.Model,java.lang.Long) 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/profile/update]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.ProfileController.profileUpdate(com.project.samplingsystem.model.entity.NBAbout,org.springframework.validation.BindingResult) 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/profile/list]}" onto public com.project.samplingsystem.model.pojo.framework.LayuiTable<com.project.samplingsystem.model.entity.NBAbout> com.project.samplingsystem.web.management.ProfileController.aboutList(com.project.samplingsystem.model.pojo.framework.Pagination<com.project.samplingsystem.model.entity.NBAbout>) 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/profile/create]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.ProfileController.aboutCreate(com.project.samplingsystem.model.entity.NBAbout) 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/project/add]}" onto public java.lang.String com.project.samplingsystem.web.management.ProjectController.add(org.springframework.ui.Model) 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/project/delete/{id}]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.ProjectController.delete(java.lang.Long) 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/project],methods=[GET]}" onto public java.lang.String com.project.samplingsystem.web.management.ProjectController.list() 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/project/create]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.ProjectController.projectCreate(com.project.samplingsystem.model.entity.NBProject,org.springframework.validation.BindingResult) 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/project/update]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.ProjectController.projectUpdate(com.project.samplingsystem.model.entity.NBProject,org.springframework.validation.BindingResult) 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/project/edit]}" onto public java.lang.String com.project.samplingsystem.web.management.ProjectController.edit(org.springframework.ui.Model,java.lang.Long) 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/project/list],methods=[GET]}" onto public com.project.samplingsystem.model.pojo.framework.LayuiTable<com.project.samplingsystem.model.entity.NBProject> com.project.samplingsystem.web.management.ProjectController.projectList(com.project.samplingsystem.model.pojo.framework.Pagination<com.project.samplingsystem.model.entity.NBProject>) 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/sampling/list]}" onto public java.util.List<com.project.samplingsystem.model.entity.Sampling> com.project.samplingsystem.web.management.sampling.SamplingController.listSampling(com.project.samplingsystem.model.pojo.framework.Pagination<com.project.samplingsystem.model.entity.Sampling>,java.lang.String) 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/settings/update]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.settings.SettingsController.update(java.lang.String,java.lang.String,java.lang.String) 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/settings/mail/update]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.settings.SettingsController.updateMailConfig(javax.servlet.http.HttpServletRequest) 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/settings/mail]}" onto public java.lang.String com.project.samplingsystem.web.management.settings.SettingsController.settingsMail(org.springframework.ui.Model) 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/settings/profile]}" onto public java.lang.String com.project.samplingsystem.web.management.settings.SettingsController.settingsProfile(org.springframework.ui.Model,java.lang.String) 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/settings/theme]}" onto public java.lang.String com.project.samplingsystem.web.management.settings.SettingsController.settingTheme(org.springframework.ui.Model) 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/settings/qrcode]}" onto public java.lang.String com.project.samplingsystem.web.management.settings.SettingsController.settingsQrcode(org.springframework.ui.Model) 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/settings/profile/update],methods=[POST]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.settings.SettingsController.updateProfile(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/settings/common]}" onto public java.lang.String com.project.samplingsystem.web.management.settings.SettingsController.settingsCommon(org.springframework.ui.Model) 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/settings/pay/update]}" onto public com.project.samplingsystem.model.pojo.framework.NBR com.project.samplingsystem.web.management.settings.SettingsController.updateQrcode(java.lang.String,java.lang.String,java.lang.String) 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/upload],methods=[POST]}" onto public java.lang.Object com.project.samplingsystem.web.management.upload.UploadController.upload(javax.servlet.http.HttpServletRequest,org.springframework.web.multipart.MultipartFile,java.lang.String) 
+00:09:34.269 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/management/upload/editorMD],methods=[POST]}" onto public java.lang.Object com.project.samplingsystem.web.management.upload.UploadController.uploadEditorMD(org.springframework.web.multipart.MultipartFile) 
+00:09:34.307 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+00:09:34.307 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+00:09:34.307 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+00:09:34.307 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/upfiles/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+00:09:34.369 [restartedMain] WARN  o.t.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead. 
+00:09:35.102 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+00:09:35.124 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup 
+00:09:35.124 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure 
+00:09:35.124 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'statFilter' has been autodetected for JMX exposure 
+00:09:35.140 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper] 
+00:09:35.140 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter] 
+00:09:35.140 [restartedMain] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing 
+00:09:35.156 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 「个人博客」APP 正在检测初始化状态，请稍后... 
+00:09:35.209 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 「个人博客」APP 已初始化，开始准备其它内容，请稍后... 
+00:09:35.209 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 「个人博客」App 正在启动中，请稍后... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/registration] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/api/qqCallback] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/registration] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/logout'，请求方式：'[GET]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/token/logout] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/login] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/login] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/api/qq] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/error] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/error] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/error] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/error] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/error] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/error] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/error] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/file] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/file/list] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/article/comments] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/article] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/article/{aId}] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/article/approve] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/article/u/{urlSeq}] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/article] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/article] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/article] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/a/comments] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/a] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/a/{aId}] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/a/approve] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/a/u/{urlSeq}] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/a] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/a] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/a] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/token/comment/sub] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/token/comment] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/token/comment] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/token/comment] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/token/comment] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/msg] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/msg/lists] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/token/msg/sub] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/note] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/note/next] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/index] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/next] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/index/next] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/profile] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/project/next] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/project] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/tag] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/init] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/font/list'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/init/submit] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/image/code] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/index'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/dashboard'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/role/create'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/update/role/resource'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/menu/delete'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/menu/add'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/menu/edit'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/resource/tree'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/menu/list'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/role/delete'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/menu/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/menu/create'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/role'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/menu'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/role/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/users/list'，请求方式：'[GET]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/users] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/users/roles/id/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/users] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/users] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/users/roles/str/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/users] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/users/roles/list'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/users/enable/update'，请求方式：'[POST]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/users/nickname/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/users'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/cloudFile/add'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/cloudFile/delete/{id}'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/cloudFile'，请求方式：'[GET]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/cloudFile] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/cloudFile] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/cloudFile] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/cloudFile] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/cloudFile/create'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/cloudFile/list'，请求方式：'[GET]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/cloudFile/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/cloudFile] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/cloudFile/edit'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/article/delete/{id}'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/article/update/top/{id}'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/article/update/appreciable/{id}'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/article/edit/tags'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/article/post'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/article/update/commented/{id}'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/article'，请求方式：'[GET]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/article/list'，请求方式：'[GET]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/article/create'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/article/edit'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/article/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/note/delete/{id}'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/note/update/top/{id}'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/note] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/note] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/note/update/show/{id}'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/note/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/note/create'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/note] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/note] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/note/list'，请求方式：'[GET]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/note'，请求方式：'[GET]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/note] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/note/edit/tags'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/note] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/note/post'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/note/edit'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/note] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/dictionary/cate/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/dictionary/cate/delete'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/dictionary/cate'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/dictionary/cate/list'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/dictionary/cate/create'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/cate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/dictionary/cloudFileCate/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/dictionary/cloudFileCate/delete'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/dictionary/cloudFileCate'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/dictionary/cloudFileCate/list'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/dictionary/cloudFileCate/create'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/cloudFileCate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/dictionary/keyword/delete'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/dictionary/keyword'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/dictionary/keyword/update/enable'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/dictionary/keyword/create'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/dictionary/keyword/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/keyword] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/dictionary/keyword/list'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/dictionary/projectCate/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/dictionary/projectCate/delete'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/dictionary/projectCate'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/dictionary/projectCate/list'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/dictionary/projectCate/create'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/projectCate] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/dictionary/tag/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/dictionary/tag/delete'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/tag] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/tag] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/dictionary/tag/list'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/tag] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/tag] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/tag] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/dictionary/tag] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/dictionary/tag'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/comment/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/comment/list'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/comment] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/comment] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/comment'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/message/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/message/list'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/message] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/message] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/message'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/profile'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/profile/delete'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/profile] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/profile] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/profile] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/profile] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/profile] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/profile] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/profile] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/profile] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/profile] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/profile] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/profile] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/profile/add'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/profile/edit'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/profile/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/profile/list'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/profile/create'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/project/add'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/project/delete/{id}'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/project'，请求方式：'[GET]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/project] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/project] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/project] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/project] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/project/create'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/project/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management/project] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/project/edit'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/project/list'，请求方式：'[GET]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/sampling/list'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/settings/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/settings/mail/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/settings/mail'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/settings/profile'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/settings/theme'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/settings/qrcode'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/settings/profile/update'，请求方式：'[POST]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/settings/common'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/settings/pay/update'，请求方式：'[]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/upload'，请求方式：'[POST]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[url = '/management/upload/editorMD'，请求方式：'[POST]'，媒体类型：'[]'] 扫描到@NBAuth，准备处理... 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 资源：[/management] 未扫描到@NBAuth，略过处理步骤 
+00:09:35.225 [restartedMain] INFO  c.p.s.c.listener.ResourceListener - 扫描资源完毕，共计处理资源数目：[109]，等待下一步插入数据库赋给网站管理员角色.. 
+00:09:35.256 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8089 (http) with context path '' 
+00:09:35.256 [restartedMain] INFO  c.p.s.SamplingsystemApplication - Started SamplingsystemApplication in 8.463 seconds (JVM running for 9.481) 
+00:09:35.256 [restartedMain] INFO  c.p.s.config.listener.InitListener - 「个人博客」App 正在准备，请稍后... 
+00:09:35.911 [restartedMain] INFO  c.p.s.config.listener.InitListener - 「个人博客」App 已经完成初始化，略过初始化步骤。 
+00:09:35.942 [restartedMain] INFO  c.p.s.config.listener.MenuListener - 「个人博客」App 初始化菜单完毕 
+00:09:35.942 [restartedMain] INFO  c.p.s.c.l.UploadFolderListener - 「个人博客」APP 文件上传路径设置为：[file:D://upload/noteblogv4/] 
+00:09:35.958 [restartedMain] INFO  c.p.s.c.l.UploadFolderListener - 「个人博客」APP 已存在上传文件夹！ 
+00:09:35.958 [restartedMain] INFO  c.p.s.config.listener.FinalListener - 「个人博客」App 启动完毕（欢迎访问楠斯素材资源店）。 

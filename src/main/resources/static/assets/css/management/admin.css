@@ -1,0 +1,104 @@
+/** Created By Wuwenbin https://wuwenbin.me
+ * mail to wuwenbinwork@163.com
+
+ * if you use the code,  please do not delete the comment
+ * 如果您使用了此代码，请勿删除此头部注释
+ * */
+.layui-float-right {float: right;}
+
+.nb-theme-color {
+    color: #F44336 !important;
+}
+
+.layui-blue {
+    color: #01AAED;
+}
+.layui-card {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .25);
+}
+.layui-selected {color: #5FB878 !important;}
+
+.layui-header *, #left-menu {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+
+.layui-logo {cursor: pointer;}
+
+.layui-logo i, .layui-logo span:first-of-type {
+    color: #5FB878;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.layui-logo span:nth-of-type(2) {font-style: normal !important;}
+.layui-layout-admin .layui-body {bottom: 45px;}
+
+.layui-side-menu .layui-nav .layui-nav-item > a {
+    padding-left: 45px;
+}
+
+.layui-side-menu .layui-nav .layui-nav-item a > i.layui-icon {
+    margin-right: 10px;
+}
+
+.layui-side-menu .layui-nav .layui-nav-item > a > i.fa {
+    position: absolute;
+    margin-right: 10px;
+    top: 50%;
+    left: 20px;
+    margin-top: -7px;
+    font-size: 15px;
+}
+.layui-nav.layui-layout-right {padding-right: 20px;}
+.layadmin-tips .layui-text {width: 80%;max-width: 500px;}
+
+@media screen and (min-width: 993px) and (max-width: 1366px) {
+    .vipspa-error .layui-container {
+        width: 700px;
+    }
+}
+
+@media screen and (min-width: 1367px) {
+    .vipspa-error .layui-container {
+        width: 1024px;
+    }
+}
+
+.layui-layout-admin .layui-footer {padding: 0;}
+
+.layadmin-tabs-card {
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    background: #fff;
+}
+
+.layadmin-container {top: 45px;}
+
+.layui-card-footer {
+    padding: 15px;
+    border-top: 1px solid #f6f6f6;
+    color: #333;
+    border-radius: 2px 2px 0 0;
+    font-size: 14px;
+}
+
+/** 未展开 */
+.treeTable-icon .layui-icon-layer:before {content: "\e66e";}
+/** 展开 */
+.treeTable-icon.open .layui-icon-layer:before {content: "\e66e";}
+.treeTable-icon .layui-icon-file:before {content: "\e656";}
+.layui-admin-mt5 {margin-top: 5px !important;}
+.layui-admin-mt10 {margin-top: 10px !important;}
+.layui-admin-mt15 {margin-top: 15px !important;}
+.layui-admin-mt20 {margin-top: 20px !important;}
+.approve{color: #5FB878}
+.approve:hover{color: #FF5722}
+.appro{font-style: italic;}
+
+.editormd-code-toolbar select{
+    display: inline-block !important;
+}
+#coverImg{padding: 10px 5px !important;}

@@ -1,0 +1,71 @@
+<link rel="stylesheet" href="/static/plugins/form-selects/form-selects.v4.css">
+<div class="layui-card layadmin-tabs-card">
+    <div class="layui-card-header">
+        <span class="layui-breadcrumb">
+            <a href="/management/index">首页</a>
+            <a><cite>编辑云文件</cite></a>
+        </span>
+    </div>
+</div>
+<div class="layui-fluid layadmin-container" id="NB-cloud-file-post-tab">
+    <div class="layui-row">
+        <div id="article-post" class="layui-col-sm12">
+            <div class="layui-card">
+                <div class="layui-card-header layui-elip">编辑云文件</div>
+                <div class="layui-card-body">
+                    <div class="layui-form">
+                        <input type="hidden" th:value="${editCloudFile.id}" name="id">
+                        <div class="layui-form-item layui-col-sm8">
+                            <label class="layui-form-label">云文件名</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="name" required lay-verify="required" placeholder="请输入项目名"
+                                       th:value="${editCloudFile.name}"
+                                       autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item layui-col-md6">
+                            <label class="layui-form-label">分类</label>
+                            <div class="layui-input-block">
+                                <select name="cateId" lay-verify="required" lay-search>
+                                    <option value="">请选择</option>
+                                    <option th:each="cate,cateStat:${cateList}" th:value="${cate.id}"
+                                            th:text="${cate.cnName}"
+                                            th:selected="${cate.id==editCloudFile.cateId}"></option>
+                                </select>
+                            </div>
+                        </div>
+
+
+
+                        <div class="layui-form-item layui-col-sm8">
+                            <label class="layui-form-label">项目url</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="url" required lay-verify="required" placeholder="请输入项目主页url"
+                                       th:value="${editCloudFile.url}"
+                                       autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+
+
+                        <div class="layui-form-item layui-form-text">
+                            <label class="layui-form-label">项目描述</label>
+                            <div class="layui-input-block">
+                                <textarea name="description" placeholder="请输入项目描述内容" class="layui-textarea" th:text="${editCloudFile.description}"></textarea>
+                            </div>
+                        </div>
+
+
+
+                        <div class="layui-form-item">
+                            <div class="layui-input-block">
+                                <button class="layui-btn" lay-submit lay-filter="cloudFileSubmit">提交</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

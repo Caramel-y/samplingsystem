@@ -1,0 +1,217 @@
+<div class="layui-card layadmin-tabs-card">
+    <div class="layui-card-header">
+        <span class="layui-breadcrumb">
+            <a href="/management/index">首页</a>
+            <a><cite>用户菜单管理</cite></a>
+        </span>
+    </div>
+</div>
+
+<div class="layui-fluid layadmin-container" id="NB-menu-tab">
+    <div class="layui-row layui-col-space10">
+        <div class="layui-col-sm3">
+            <div class="layui-card">
+                <div class="layui-card-header">
+                    角色信息列表
+                </div>
+                <div class="layui-card-body">
+                    <table class="layui-table role-list" lay-skin="nob">
+                        <tbody>
+                        <tr v-for="(role,index) in roles" v-bind:class="{'select':role.id == selected}"
+                            @click="selectRole(role.id,role.cnName)">
+                            <td>
+                                <i class="layui-icon layui-icon-username"></i><span
+                                    v-bind:class="{'layui-selected':role.id == selected}"> {{role.cnName}} </span>
+                            </td>
+                            <td class="layui-float-right"><i v-if="role.id == selected"
+                                                             class="layui-icon layui-icon-ok layui-selected"></i></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-col-sm9">
+            <div class="layui-card">
+                <div class="layui-card-header layui-elip">菜单信息 - <span style="color:#5FB878;">{{roleName}}</span></div>
+                <div class="layui-card-body">
+                    <table id="menuTable" class="layui-table" lay-filter="menuTable"></table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<style>
+    .layui-table.role-list tr {
+        cursor: pointer;
+    }
+
+    .layui-table.role-list tr.select {
+        background: #f2f2f2;
+    }
+
+</style>
+<script th:inline="javascript">
+    var menuTabApp = new Vue({
+        el: "#NB-menu-tab",
+        data: {
+            roles: [[${roleList}]]
+            , selected: [[${roleId}]] || [[${roleList[0].id}]]
+            , roleName: [[${roleList[0].cnName}]]
+        },
+        created: function () {
+            window.__roleId = this.selected;
+        },
+        mounted: function () {
+            layui.use(['treetable', 'element', 'table'], function () {
+                var treetable = window.__layTreetable = layui.treetable;
+                var element = layui.element;
+                var table = layui.table;
+                element.render();
+
+                // 渲染表格
+                window._menuTable = treetable.render({
+                    treeColIndex: 1,          // treetable新增参数
+                    treeSpid: 0,             // treetable新增参数
+                    treeIdName: 'id',       // treetable新增参数
+                    treePidName: 'parentId',     // treetable新增参数
+                    treeDefaultClose: true,   // treetable新增参数
+                    treeLinkage: false,        // treetable新增参数
+                    elem: '#menuTable',
+                    url: BMY.url.prefix + '/menu/list',
+                    where: {
+                        roleId: menuTabApp.selected
+                    },
+                    cols: [
+                        [
+                            {type: 'numbers', title: '序号'},
+                            {field: 'id', title: '菜单索引'},
+                            {
+                                field: 'name', title: '菜单名称', width: '20%', templet: function (data) {
+                                    return "<i class='" + data.icon + "'></i> " + data.name;
+                                }
+                            },
+                            {
+                                field: 'url', title: '菜单链接', templet: function (d) {
+                                    return d.resource === null ? " - " : d.resource.url;
+                                }
+                            },
+                            {field: 'parentId', title: '上级id'},
+                            {
+                                field: 'type', title: '菜单类型', width: '10%', templet: function (d) {
+                                    if (d.type === 'ROOT') {
+                                        return '<span class="layui-badge layui-bg-black">根节点</span>'
+                                    }
+                                    if (d.type === 'PARENT') {
+                                        return '<span class="layui-badge layui-bg-blue">目录</span>'
+                                    }
+                                    if (d.type === 'LEAF') {
+                                        return '<span class="layui-badge layui-bg-green">链接</span>'
+                                    }
+                                }
+                            },
+                            {
+                                title: '操作', width: 178, align: 'center', toolbar: '#bar'
+                            }
+                        ]
+                    ]
+                });
+
+                table.on('tool(menuTable)', function (obj) {
+                    var data = obj.data;
+                    if (obj.event === 'add') {
+                        location.hash = vipspa.stringify('/menu/add', {
+                            roleId: menuTabApp.selected,
+                            parentId: data.id
+                        });
+                    } else if (obj.event === 'del') {
+                        layer.confirm('确定删除 [' + data.name + '] 菜单吗？', function (index) {
+                            $.post(BMY.url.prefix + '/menu/delete', {id: data.id}, function (resp) {
+                                layer.msg(resp.message);
+                                if (resp.code === 200) {
+                                    obj.del();
+                                }
+                                layer.close(index);
+                            })
+                        });
+                    } else if (obj.event === 'edit') {
+                        location.hash = vipspa.stringify('/menu/edit', {
+                            menuId: data.id,
+                            roleId: menuTabApp.selected
+                        });
+                    }
+                });
+
+            });
+        }
+        , methods: {
+            selectRole: function (roleId, roleCnName) {
+                menuTabApp.selected = roleId;
+                menuTabApp.roleName = roleCnName;
+                layer.load(2);
+                window.__layTreetable.render({
+                    treeColIndex: 1,          // treetable新增参数
+                    treeSpid: 0,             // treetable新增参数
+                    treeIdName: 'id',       // treetable新增参数
+                    treePidName: 'parentId',     // treetable新增参数
+                    treeDefaultClose: false,   // treetable新增参数
+                    treeLinkage: false,        // treetable新增参数
+                    elem: '#menuTable',
+                    url: BMY.url.prefix + '/menu/list',
+                    where: {
+                        roleId: menuTabApp.selected
+                    },
+                    cols: [
+                        [
+                            {type: 'numbers', title: '序号'},
+                            {field: 'id', title: '菜单索引'},
+                            {
+                                field: 'name', title: '菜单名称', width: '20%', templet: function (data) {
+                                    return "<i class='" + data.icon + "'></i> " + data.name;
+                                }
+                            },
+                            {
+                                field: 'resource', title: '菜单链接', templet: function (d) {
+                                    return d.resource === null ? " - " : d.resource.url;
+                                }
+                            },
+                            {field: 'parentId', title: '上级id'},
+                            {
+                                field: 'type', title: '菜单类型', width: '10%', templet: function (d) {
+                                    if (d.type === 'ROOT') {
+                                        return '<span class="layui-badge layui-bg-black">根节点</span>'
+                                    }
+                                    if (d.type === 'PARENT') {
+                                        return '<span class="layui-badge layui-bg-blue">目录</span>'
+                                    }
+                                    if (d.type === 'LEAF') {
+                                        return '<span class="layui-badge layui-bg-green">链接</span>'
+                                    }
+                                }
+                            },
+                            {
+                                title: '操作', width:
+                                    178, align:
+                                    'center', toolbar:
+                                    '#bar'
+                            }
+                        ]
+                    ],
+                    done: function () {
+                        layer.closeAll('loading');
+                    }
+                });
+            }
+        }
+    })
+</script>
+<script type="text/html" id="bar">
+    <a class="layui-btn layui-btn-xs" lay-event="add">添加</a>
+    {{# if(d.parentId != 0){ }}
+    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="edit">修改</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+    {{# } }}
+</script>

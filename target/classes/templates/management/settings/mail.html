@@ -1,0 +1,98 @@
+<style>
+    .layui-form-label {
+        width: 150px !important;
+    }
+
+    .layui-input-block {
+        margin-left: 180px !important;
+    }
+</style>
+<div class="layui-card layadmin-tabs-card">
+    <div class="layui-card-header">
+        <span class="layui-breadcrumb">
+            <a href="/management/index">首页</a>
+            <a><cite>偏好设置</cite></a>
+            <a><cite>邮件设置</cite></a>
+        </span>
+    </div>
+</div>
+<div class="layui-fluid layadmin-container" id="NB-settings-mail-tab">
+    <div class="layui-row layui-col-space10 layui-form">
+
+        <div class="layui-card">
+            <div class="layui-card-header">邮件服务器设置</div>
+            <div class="layui-card-body">
+
+
+                <div class="layui-form" lay-filter="mailServer">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">SMTP服务器</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="mail_smpt_server_addr" th:value="${mail_smpt_server_addr}"
+                                   class="layui-input">
+                        </div>
+                        <div class="layui-form-mid layui-word-aux">如：smtp.163.com</div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">SMTP端口号</label>
+                        <div class="layui-input-inline" style="width: 80px;">
+                            <input type="text" name="mail_smpt_server_port" lay-verify="number"
+                                   th:value="${mail_smpt_server_port}"
+                                   class="layui-input">
+                        </div>
+                        <div class="layui-form-mid layui-word-aux">一般为 25 或 465</div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">发件人邮箱</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="mail_server_account" th:value="${mail_server_account}"
+                                   lay-verify="email"
+                                   autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">发件人账号</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="mail_sender_name" th:value="${mail_sender_name}" autocomplete="off"
+                                   class="layui-input">
+                        </div>
+                        <div class="layui-form-mid layui-word-aux">一般为邮箱前缀</div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">邮箱登入密码</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="mail_server_password" th:value="${mail_server_password}"
+                                   autocomplete="off"
+                                   class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" lay-submit lay-filter="set_system_email">确认保存</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+<script>
+    layui.use(['form', 'element'], function () {
+        var form = layui.form;
+        var element = layui.element;
+        element.render();
+
+        form.on('submit(set_system_email)', function (data) {
+            BMY.ajaxManagement("/settings/mail/update", data.field, function (json) {
+                BMY.okMsgHandle(json, "修改邮件服务配置成功！");
+            });
+        })
+    })
+</script>
+
+
+
